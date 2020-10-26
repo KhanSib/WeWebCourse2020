@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page1</title>
+</head>
+<body>
+
+<form action="/handler.php" method="post">
+
+    <label for="clientFirstName"> Имя</label>
+    <input type="text" id="clientFirstName" name="clientFirstName" placeholder="Имя"/>
+
+    <label for="clientLastName"> Фамилия</label>
+    <input type="text" id="clientLastName" name="clientLastName" placeholder="Фамилия"/>
+
+    <label for="clientAdditionalInformation"> Дополнительная информация</label>
+    <textarea type="text" id="clientAdditionalInformation" name="clientAdditionalInformation"
+              placeholder="Дополнительная информация"></textarea>
+
+    <label for="option1"> Опция 1</label>
+    <input type="checkbox" id="option1" name="option1"/>
+
+    <label for="option2"> Опция 2</label>
+    <input type="checkbox" id="option2" name="option2"/>
+
+    <label for="myRadio1"> 1 </label>
+    <input id="myRadio1" checked="checked" type="radio" value="1" name="myRadio">
+    <label for="myRadio2"> 2 </label>
+    <input id="myRadio2" checked="checked" type="radio" value="1" name="myRadio">
+    <label for="myRadio3"> 3 </label>
+    <input id="myRadio3" checked="checked" type="radio" value="1" name="myRadio">
+
+    <label for="options"> </label>
+    <select id="options" name="options[]">
+        <option value="1">Пункт 1</option>
+        <option value="2">Пункт 2</option>
+        <option value="3">Пункт 3</option>
+    </select>
+
+    <label for="multipleOptions"> </label>
+    <select id="multipleOptions" multiple size=3 name="multipleOptions[]">
+        <option value="1">Пункт 1</option>
+        <option value="2">Пункт 2</option>
+        <option value="3">Пункт 3</option>
+    </select>
+
+    <button type="submit">Отправить заявку</button>
+</form>
+
+<a href="Page2.html">Ссылка на страницу 2</a>
+</body>
+</html>
