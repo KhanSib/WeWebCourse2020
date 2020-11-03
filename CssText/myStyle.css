@@ -1,21 +1,40 @@
-.blue_text{
-    color:#378DB2;
-    font-weight: 700;
-}
-
-body{
+body {
     color: #676565;
     background: #FEEED6;
-    font-family: Helvetica Neue,Helvetica,Arial,sans-serif ;
-    font-size: 60px;
+    font-family: Arial, sans-serif;
+    font-size: 0.95em;
+    margin: 0.5em;
 }
 
-without-discount{
-text-decoration-line: line-through;
+.title {
+    font-size: 1.75em;
+    line-height: 1.15em;
+    margin-bottom: 0.5em;
 }
 
-h1{
-    color: #676565;
-    font-size: 1.4em;
-
+.item {
+    font-size: 1.1em;
+    margin-bottom: 2em;
 }
+
+.blue_text {
+    color: #378DB2;
+    font-weight: bold;
+    margin-bottom: 0.55em;
+}
+
+.without-discount {
+    text-decoration-line: line-through;
+}
+
+.contents {
+    text-indent: 1em;
+    line-height: 1.4em;
+    max-width: 48em;
+    text-align: justify;
+}
+
+.item, .contents {
+    margin-bottom: 0.75em;
+}
+
