@@ -1,0 +1,21 @@
+.blue_text{
+    color:#378DB2;
+    font-weight: 700;
+}
+
+body{
+    color: #676565;
+    background: #FEEED6;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif ;
+    font-size: 60px;
+}
+
+without-discount{
+text-decoration-line: line-through;
+}
+
+h1{
+    color: #676565;
+    font-size: 1.4em;
+
+}
