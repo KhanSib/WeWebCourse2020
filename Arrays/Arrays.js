@@ -35,16 +35,19 @@ for (var i = 1; i <= 100; i++) {
 }
 
 function printSquaresOddNumbers(array) {
-    return array.forEach(function (current) {
+    return array
+        .filter(function (current) {
             if (current % 2 === 0) {
-                return console.log(Math.pow(current, 2));
+                return current;
             }
-        }
-    );
+        })
+        .map(function (current) {
+            return Math.pow(current, 2);
+        });
 }
 
 console.log("Сортировка по убыванию: " + DescSort(array1));
 console.log("Первые 5 элементов: " + getFistElements(array1, 5));
 console.log("Последние 5 элементов: " + getLastElements(array1, 5));
 console.log("Сумма четных элементов: " + getSumOddNumbers(array1));
-console.log(printSquaresOddNumbers(array2));
+console.log("Квадраты четных чисел: " + printSquaresOddNumbers(array2));
