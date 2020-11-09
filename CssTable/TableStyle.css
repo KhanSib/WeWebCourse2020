@@ -1,0 +1,36 @@
+table {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+    border: 1px solid #CCCCCC;
+
+}
+
+tr, td, th {
+    border: 1px solid #CCCCCC;
+    height: 44px;
+    width: 140px;
+    text-align: left;
+    padding-left: 10px;
+    vertical-align: middle;
+}
+
+tbody > tr:nth-child(odd) {
+    background: #EEEEEE;
+}
+
+tr > th:nth-child(3) {
+    width: 260px;
+}
+
+tr > th:nth-child(4) {
+    width: 170px;
+}
+
+thead {
+    background: #3498DB;
+}
+
+tbody {
+    color: #454545;
+}
