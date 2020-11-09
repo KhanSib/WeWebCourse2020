@@ -14,7 +14,7 @@ body {
 
 .item {
     font-size: 1.1em;
-    margin-bottom: 2em;
+    margin-bottom: 0.75em;
 }
 
 .blue_text {
@@ -27,14 +27,10 @@ body {
     text-decoration-line: line-through;
 }
 
-.contents {
+.item.blue_text ~ p {
     text-indent: 1em;
     line-height: 1.4em;
     max-width: 48em;
     text-align: justify;
-}
-
-.item, .contents {
     margin-bottom: 0.75em;
 }
-

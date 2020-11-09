@@ -40,7 +40,19 @@ function getCountriesMaxCountCities(countries) {
                 })
                 [0].count;
         });
+}
 
+function getCountriesPopulation(countries) {
+    return countries.map(function (item) {
+        return {
+            name: item.name, population: item.cities.map(function (item) {
+                return item.population;
+            }).reduce(function (sum, current) {
+                return sum + current;
+            })
+        };
+    });
 }
 
 console.log(getCountriesMaxCountCities(countries));
+console.log(getCountriesPopulation(countries));
