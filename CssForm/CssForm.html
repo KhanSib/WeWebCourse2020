@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CssForm</title>
+
+    <link rel="stylesheet" type="text/css" href="reset.css"/>
+    <link rel="stylesheet" type="text/css" href="FormStyle.css"/>
+</head>
+<body>
+<label class="general-label" for="request-form">Отправить заявку</label>
+<form class="request-form" id="request-form" action="/handler.php" method="post">
+    <div>
+    <label for="client-name">Ваше имя</label>
+    <input type="text" id="client-name" name="clientName" placeholder="Ваше имя *"/>
+    </div>
+
+    <div>
+    <label for="client-tel-number">Ваш номер телефона</label>
+    <input type="text" id="client-tel-number" name="clientTelNumber" placeholder="Ваш номер телефона *"/>
+    </div>
+
+    <div>
+    <label for="client-mail">Ваш email или vk</label>
+    <input type="text" id="client-mail" name="clientMail" placeholder="Ваш email или vk *"/>
+    </div>
+
+    <div>
+    <label for="client-comment">Комментарий</label>
+    <input class="comment" type="text" id="client-comment" name="clientComment" placeholder="Комментарий (не обязательно)"/>
+    </div>
+
+    <div>
+    <p>Заполните и отправьте форму, и мы перезвоним по указанному номеру</p>
+    </div>
+
+    <button type="submit">Отправить заявку</button>
+</form>
+</body>
+</html>

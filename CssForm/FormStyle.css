@@ -1,0 +1,34 @@
+body {
+    color: #676565;
+}
+
+
+.request-form {
+    background: #FEEED6;
+    width: 45em;
+    height: 29em;
+    padding-left: 1em;
+}
+
+.request-form input {
+    width: 52em;
+    height: 1em;
+    border: none;
+    box-shadow: none;
+   }
+
+.comment {
+
+}
+
+.general-label {
+    padding-left: 15px;
+    font-family: Arial, sans-serif;
+    font-size: 2em;
+}
+
+input, label {
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 7px;
+}

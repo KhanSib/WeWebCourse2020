@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TemperatureConversion</title>
+
+    <script defer src="TemperatureConversion.js"></script>
+
+    <style>
+        body div {
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+
+        .input {
+            width: 250px;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <label for="temperature">температура в цельсиях</label>
+    <input id="temperature" class="input" type="text" placeholder="Введите температуру в цельсиях">
+    <button id="calc-button" type="button">перевести</button>
+</div>
+
+<div>
+    <label for="temperature-in-kelvin">температура в кельвинах</label>
+    <input id="temperature-in-kelvin" class="input" type="text" disabled="disabled">
+</div>
+
+<div>
+    <label for="temperature-in-fahrenheit">температура в фаренгейтах</label>
+    <input id="temperature-in-fahrenheit" class="input" type="text" disabled="disabled">
+</div>
+
+<div class="error" id="error-message"></div>
+</body>
+</html>
