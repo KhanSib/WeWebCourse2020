@@ -1,25 +1,25 @@
 (function () {
     var array1 = [1, 20, 3, 40, 5, 6, 7, 8];
 
-    function DescSort(array) {
+    function sortByDesc(array) {
         return array.sort(function (e1, e2) {
             return e2 - e1;
         });
     }
 
-    function getFistElements(array, count) {
+    function getFirstElements(array, count) {
         return array.slice(0, count);
     }
 
     function getLastElements(array, count) {
-        if (array.length - count <= 0) {
+        if (array.length <= count) {
             return array.slice(0);
-        } else {
-            return array.slice(array.length - count);
         }
+
+        return array.slice(array.length - count);
     }
 
-    function getSumOddNumbers(array) {
+    function getOddNumbersSum(array) {
         return array.reduce(function (sum, current) {
             if (current % 2 === 0) {
                 return sum + current;
@@ -35,21 +35,19 @@
         array2.push(i);
     }
 
-    function printSquaresOddNumbers(array) {
+    function getOddNumbersSquares(array) {
         return array
             .filter(function (current) {
-                if (current % 2 === 0) {
-                    return current;
-                }
+                return current % 2 === 0;
             })
             .map(function (current) {
                 return Math.pow(current, 2);
             });
     }
 
-    console.log("Сортировка по убыванию: " + DescSort(array1));
-    console.log("Первые 5 элементов: " + getFistElements(array1, 5));
+    console.log("Сортировка по убыванию: " + sortByDesc(array1));
+    console.log("Первые 5 элементов: " + getFirstElements(array1, 5));
     console.log("Последние 5 элементов: " + getLastElements(array1, 5));
-    console.log("Сумма четных элементов: " + getSumOddNumbers(array1));
-    console.log("Квадраты четных чисел: " + printSquaresOddNumbers(array2));
-});
+    console.log("Сумма четных элементов: " + getOddNumbersSum(array1));
+    console.log("Квадраты четных чисел: " + getOddNumbersSquares(array2));
+}());
