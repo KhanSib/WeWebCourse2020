@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQueryTodoList</title>
+
+    <link rel="stylesheet" type="text/css" href="PhoneBookJQuery.css"/>
+
+    <script defer src="libs/jQuery.js"></script>
+    <script defer src="PhoneBookJQuery.js"></script>
+</head>
+<body>
+
+<div class="form">
+    <div>
+        <input type="text" id="last-name" placeholder="Введите фамилию"/>
+    </div>
+
+    <div>
+        <input type="text" id="first-name" placeholder="Введите имя"/>
+    </div>
+
+    <div>
+        <input type="text" id="phone-number" placeholder="Введите телефон"/>
+    </div>
+
+    <div>
+        <button id="add-button">Внести</button>
+        <span class="error" id="error-message"></span>
+    </div>
+</div>
+
+
+
+<table class="common">
+    <thead class="table-title">
+    <tr>
+        <th>№</th>
+        <th>Фамилия</th>
+        <th>Имя</th>
+        <th>Номер телефона</th>
+        <th></th>
+    </tr>
+    </thead>
+
+    <tbody class="table-body" id="phone-book-body">
+
+    </tbody>
+</table>
+</body>
+</html>

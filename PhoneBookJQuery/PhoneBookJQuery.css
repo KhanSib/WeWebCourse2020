@@ -1,0 +1,63 @@
+body {
+    margin: 50px;
+}
+
+.error {
+    color: red;
+}
+
+.error-input {
+    border-color: red;
+}
+
+.form > div {
+    margin-bottom: 10px;
+}
+
+.form > div > input, button {
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+}
+
+/* Для таблицы */
+table {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+    border: 1px solid #CCCCCC;
+}
+
+th {
+    border: 1px solid #CCCCCC;
+    height: 44px;
+    width: 140px;
+    text-align: center;
+    padding-left: 10px;
+    vertical-align: middle;
+    horiz-align: center;
+}
+
+tbody > tr:nth-child(odd) {
+    background: #EEEEEE;
+}
+
+tr > th:nth-child(1), tr > th:nth-child(5) {
+    width: 30px;
+}
+
+tr > td:nth-child(5) {
+    color: red;
+}
+
+tr > th:nth-child(2), tr > th:nth-child(3), tr > th:nth-child(4) {
+    width: 250px;
+}
+
+thead {
+    background: #3498DB;
+}
+
+tbody {
+    color: #454545;
+    text-align: center;
+}
