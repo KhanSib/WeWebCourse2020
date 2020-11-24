@@ -50,11 +50,30 @@ $(document).ready(function () {
             tableRow.find(".first-name").text(firstNameText);
             tableRow.find(".phone-number").text(phoneNumberText);
             tableRow.find(".delete").click(function () {
-                tableRow.remove();
-                $("#phone-book-body tr").each(function (i) {
-                    var number = i + 1
-                    $(this).find("td:first").text(number);
+                var confirm = $("<div id='dialog-confirm' title='Удалить данные?'><p><span class='ui-icon ui-icon-alert' style='float:left; margin:12px 12px 20px 0;'></span>Данные будут удалены безвозвратно. Вы уверены?</p></div>");
+                confirm.appendTo(document.body).hide();
+
+                $("#dialog-confirm").dialog({
+                    resizable: false,
+                    height: "auto",
+                    width: 400,
+                    modal: true,
+                    buttons: {
+                        "Да": function () {
+                            tableRow.remove();
+                            $("#phone-book-body tr").each(function (i) {
+                                var number = i + 1;
+                                $(this).find("td:first").text(number);
+                            });
+                            $(this).dialog("close");
+                        },
+                        "Нет": function () {
+                            $(this).dialog("close");
+                        }
+                    }
                 });
+
+                $.remove("#dialog-confirm");
             });
         }
 
