@@ -11,24 +11,24 @@ $(document).ready(function () {
         var firstNameText = firstName.val();
         var phoneNumberText = phoneNumber.val();
         var needReturn = false;
-        var text="Не введено: ";
+        var text = "Не введено: ";
 
         if (lastNameText === "") {
             text += "фамилия ";
             lastName.addClass("error-input");
-            needReturn=true;
+            needReturn = true;
         }
 
         if (firstNameText === "") {
             text += "имя ";
             firstName.addClass("error-input");
-            needReturn=true;
+            needReturn = true;
         }
 
         if (phoneNumberText === "") {
             text += "телефон";
             phoneNumber.addClass("error-input");
-            needReturn=true;
+            needReturn = true;
         }
 
         if (needReturn) {
