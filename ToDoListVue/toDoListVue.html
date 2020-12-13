@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>toDoListVue</title>
 
     <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css"/>
 
@@ -10,13 +9,45 @@
     <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script defer src="node_modules/vue/dist/vue.js"></script>
     <script defer src="toDoListVue.js"></script>
+
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+
+    <title>toDoListVue</title>
 </head>
 <body>
-<div class="container" id="app">
-    <input class="form-control mb-2 mt-2 " type="text" v-model="message"/>
-    <button v-on:click="multi" class="btn btn-primary" type="button">Добавить</button>
+<div class="container">
+    <div v-cloak id="app">
+        <h1 class="mb-3">TODO List</h1>
 
+        <div class="row no-gutters">
+            <div class="col pr-2">
+                <input v-model="newToDoText" class="form-control mb-2" type="text"/>
+            </div>
+            <div class="col-auto">
+                <button @click="addNewToDoItem " class="btn btn-primary mb-2" type="button">Добавить</button>
+            </div>
+        </div>
 
+        <ul>
+            <li class="py-2" v-for="item in items" :key="item.id">
+                <template v-if="item.isEditing">
+                    <input v-model="item.editText">
+                    <button @click="saveItem(item)" class="btn btn-primary" type="button">Сохранить</button>
+                    <button @click="stopEditItem(item)" class="btn btn-danger" type="button">Отменить</button>
+                </template>
+
+                <template v-else>
+                    <span>{{ item.text }}</span>
+                    <button @click="startEditItem(item)" class="btn btn-primary" type="button">Изменить</button>
+                    <button @click="deleteItem(item)" class="btn btn-danger" type="button">Удалить</button>
+                </template>
+            </li>
+        </ul>
+    </div>
 </div>
 </body>
 </html>
