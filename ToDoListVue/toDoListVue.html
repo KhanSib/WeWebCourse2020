@@ -21,6 +21,12 @@
 <body>
 <div class="container">
     <div v-cloak id="app">
+        <todo-list></todo-list>
+    </div>
+</div>
+
+<script id="todo-list-template" type="text/x-template">
+    <div>
         <h1 class="mb-3">TODO List</h1>
 
         <div class="row no-gutters">
@@ -33,21 +39,32 @@
         </div>
 
         <ul>
-            <li class="py-2" v-for="item in items" :key="item.id">
-                <template v-if="item.isEditing">
-                    <input v-model="item.editText">
-                    <button @click="saveItem(item)" class="btn btn-primary" type="button">Сохранить</button>
-                    <button @click="stopEditItem(item)" class="btn btn-danger" type="button">Отменить</button>
-                </template>
-
-                <template v-else>
-                    <span>{{ item.text }}</span>
-                    <button @click="startEditItem(item)" class="btn btn-primary" type="button">Изменить</button>
-                    <button @click="deleteItem(item)" class="btn btn-danger" type="button">Удалить</button>
-                </template>
-            </li>
+            <todo-list-item class="py-2"
+                            v-for="item in items"
+                            @delete-item="deleteItem"
+                            @save-item="saveItem"
+                            :item="item"
+                            :key="item.id">
+            </todo-list-item>
         </ul>
     </div>
-</div>
+</script>
+
+<script id="todo-list-item-template" type="text/x-template">
+    <li class="py-2">
+        <template v-if="isEditing">
+            <input v-model="editText">
+            <button @click="saveItem" class="btn btn-primary" type="button">Сохранить</button>
+            <button @click="stopEditItem" class="btn btn-danger" type="button">Отменить</button>
+        </template>
+
+        <template v-else>
+            <span>{{ item.text }}</span>
+            <button @click="startEditItem" class="btn btn-primary" type="button">Изменить</button>
+            <button @click="deleteItem" class="btn btn-danger" type="button">Удалить</button>
+        </template>
+    </li>
+</script>
+
 </body>
 </html>
