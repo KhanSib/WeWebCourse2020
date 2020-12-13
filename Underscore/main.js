@@ -17,7 +17,8 @@
     var peoplesWithAgeBetween20And30=_.chain(peoples)
     .filter(function(p) { return p.age >= 20 && p.age <= 30; })
     .sortBy("age")
-    .pluck("name");
+    .pluck("name")
+    .value();
 
     console.log(peoplesWithAgeBetween20And30);
 }());
