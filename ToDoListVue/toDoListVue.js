@@ -2,7 +2,13 @@
     var vm = new Vue({
         el: "#app",
         data: {
-        message: "Привет, Vue!"
+        message: ""
+    },
+
+    methods:   {
+         multi:function(e){
+               this.message=this.message+"01";
+               }
     }
 });
 }());
